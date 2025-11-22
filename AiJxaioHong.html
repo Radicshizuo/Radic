@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To 江小宏</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-balance {
+                text-wrap: balance;
+            }
+            .bg-gradient-soft {
+                background: linear-gradient(135deg, #f9f4f5 0%, #fdf2f8 100%);
+            }
+            .card-shadow {
+                box-shadow: 0 10px 30px -5px rgba(236, 213, 220, 0.2);
+            }
+        }
+    </style>
+    <style>
+        /* 极简爱心装饰 */
+        .heart-icon {
+            opacity: 0.12;
+            transition: all 0.3s ease;
+        }
+
+        .content:hover .heart-icon {
+            opacity: 0.25;
+            transform: scale(1.05);
+        }
+
+        /* 平滑滚动 */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 图片渐入效果 */
+        .img-fade {
+            transition: opacity 0.8s ease;
+        }
+
+        .img-fade:hover {
+            opacity: 0.95;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-soft min-h-screen flex items-center justify-center p-6 font-sans text-gray-800">
+    <!-- 装饰元素 -->
+    <div class="fixed top-10 left-10 heart-icon">
+        <i class="fa fa-heart text-8xl text-pink-300"></i>
+    </div>
+    <div class="fixed bottom-10 right-10 heart-icon">
+        <i class="fa fa-heart text-8xl text-pink-300"></i>
+    </div>
+
+    <!-- 主卡片 -->
+    <div class="content max-w-lg w-full bg-white rounded-3xl overflow-hidden card-shadow relative z-10">
+        <!-- 顶部装饰条 -->
+        <div class="h-2 bg-gradient-to-r from-pink-200 via-rose-100 to-pink-200"></div>
+
+        <!-- 内容区域 -->
+        <div class="p-8 md:p-10">
+            <!-- 标题部分 -->
+            <div class="text-center mb-8">
+                <h1 class="text-3xl md:text-4xl font-light tracking-wide text-gray-700">江小宏</h1>
+                <div class="w-20 h-px bg-pink-200 mx-auto my-4"></div>
+                <p class="text-gray-500 font-light italic">My Favorite Person</p>
+            </div>
+
+            <!-- 全新文案：自然真诚的日常情话 -->
+            <div class="text-gray-600 leading-relaxed text-balance space-y-4 mb-8">
+                <p>和你待在一起的时光，总是特别安心。</p>
+                <p>不管是喧闹的街头，还是安静的夜晚，只要身边是你，就刚刚好。</p>
+                <p>我不用刻意伪装，不用想太多话术，做自己就好。</p>
+                <p>喜欢和你分享废话，喜欢看你笑，喜欢这种「我们」的感觉。</p>
+                <p class="mt-6 text-right font-medium text-pink-500">—— 往后的日子，继续和你并肩走</p>
+            </div>
+
+            <!-- 照片区域 -->
+            <div class="rounded-xl overflow-hidden mb-8 bg-gray-50">
+                <img src="https://picsum.photos/seed/love2025/600/400" alt="我们的时光"
+                    class="w-full h-auto object-cover img-fade">
+            </div>
+
+            <!-- 结尾 -->
+            <div class="text-center text-sm text-gray-400 pt-4 border-t border-gray-100">
+                <p>With You Always · <span class="text-pink-400">❤️</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
